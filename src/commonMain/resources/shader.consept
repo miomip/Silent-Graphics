@@ -1,0 +1,42 @@
+
+input v as Vector2I
+input w as Int
+
+output i as Vector3I
+
+val aPos: Vec3F(0.0) // makes aPos with using Vec3F(0.0, 0.0, 0.0)
+
+fun main() {
+    i = Vector3I(v, w)
+}
+
+
+
+:::
+
+in Vector2I *v;
+in Int *w;
+out Vector3I *i;
+fun main() {
+    &i = Vector3I(&v, &w)
+}
+
+:::
+
+section .text
+    global _start ;
+
+_start:
+    mov eax,1 ;sys_exit
+    int 0x80 ;call kernel
+
+section .data
+    v:
+        dd 0x0
+        dd 0x0
+    w dd 0x0 ; 0x0 replaced by actual data
+    i:
+        [v]0
+        [v]1
+        w
+

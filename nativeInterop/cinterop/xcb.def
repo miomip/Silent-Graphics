@@ -1,0 +1,5 @@
+package = xcb
+
+headers = xcb/xcb.h
+
+compilerOpts = -ID:/Projects/IdeaProjects/SilentGraphics/nativeInterop/cinterop/include/

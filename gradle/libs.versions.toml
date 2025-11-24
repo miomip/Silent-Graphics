@@ -1,0 +1,24 @@
+
+[versions]
+kotlin = "2.2.20"
+kotlinxSerialization = "1.9.0"
+kotlinxCoroutines = "1.10.2"
+kotlinxDatetime = "0.7.1"
+kermitVersion = "2.0.8"
+jetbrainsAnnotations = "26.0.2-1"
+
+[libraries]
+kotlinxSerialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
+kotlinxDatetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxDatetime" }
+kotlinxCoroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
+kermit = { module = "co.touchlab:kermit", version.ref = "kermitVersion"}
+jetbrains-annotations = { module = "org.jetbrains:annotations", version.ref = "jetbrainsAnnotations"}
+
+
+[bundles]
+kotlinxEcosystem = ["kotlinxDatetime", "kotlinxSerialization", "kotlinxCoroutines", "kermit", "jetbrains-annotations"]
+
+[plugins]
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+mavenPublish = { id = "com.vanniktech.maven.publish", version = "0.29.0" }
+kotlinxSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }

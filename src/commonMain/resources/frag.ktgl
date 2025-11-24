@@ -1,0 +1,6 @@
+input vertexColor as Vec4I
+output fragColor as Vec4I
+
+fun main() {
+    fragColor = vertexColor
+}

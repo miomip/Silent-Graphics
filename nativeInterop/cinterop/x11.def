@@ -1,0 +1,5 @@
+package = x11
+
+headers = X11/Xlib.h
+
+compilerOpts = -ID:/Projects/IdeaProjects/SilentGraphics/nativeInterop/cinterop/include/

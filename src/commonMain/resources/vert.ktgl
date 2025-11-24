@@ -1,0 +1,7 @@
+val aPos: Vec3F(0.0)
+output vertexColor as Vec4F
+
+fun main() {
+    basePosition = Vec4F(aPos, 1.0)
+    vertexColor = Vec4F(0.5, 0.0, 0.0, 1.0)
+}
